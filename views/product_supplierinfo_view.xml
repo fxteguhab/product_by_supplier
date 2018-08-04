@@ -22,8 +22,8 @@
                     <field name="product_name" string="Supplier Product Name"/>
                     <field name="product_tmpl_id" />
                     <group expand='1' string='Group by...'>
-                       <filter string='Product Code' name='supplier_code' icon="terp-stock_symbol-selection" 
-                            domain="[]" context="{'group_by' : 'product_code'}" />
+                       <!--<filter string='Product Code' name='supplier_code' icon="terp-stock_symbol-selection" 
+                            domain="[]" context="{'group_by' : 'product_code'}" />-->
                        <filter string='Product' name='product' icon="terp-stock_symbol-selection" domain="[]" 
                             context="{'group_by' : 'product_tmpl_id'}" />
                        <filter string='Supplier' name='supplier' icon="terp-stock_symbol-selection" domain="[]"
@@ -38,15 +38,13 @@
             <field name="model">product.supplierinfo</field>
             <field name="priority">90</field>
             <field name="arch" type="xml">
-                <tree string="Supplier Information" default_order = "rank" >
-                    <field name="sequence" widget="handle"/>
+                <tree string="Supplier Information">
+                    <!--<field name="sequence" widget="handle"/>-->
                     <field name="product_tmpl_id" string="Product"/>
-                    <field name="product_current_stock"/>
                     <field name="name"/>
-                    <field name="rank"/>
-		    <!--<field name="delay"/>-->
+		    <!--    <field name="delay"/>
                     <field name="min_qty"/>
-                    <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                    <field name="company_id" groups="base.group_multi_company" widget="selection"/>-->
                 </tree>
             </field>
         </record>
@@ -94,7 +92,7 @@
             <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_product_supplierinfo_tree1"/>
             <field name="search_view_id" ref="view_product_supplierinfo_search"/>
-            <field name="context">{'search_default_supplier':1,'group_by':[]}</field>
+            <!--<field name="context">{'search_default_supplier':1,'group_by':[]}</field>-->
         </record>
 
         <menuitem

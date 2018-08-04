@@ -80,10 +80,10 @@ class ProductSupplierinfo(osv.osv):
 
 
 	_columns = {
-			'product_current_stock' : fields.function(_product_current_stock, string="Stock", type='text', store=False),
-			'rank' :fields.function(_get_rank,string = "Rank", type = 'integer', method = True),
+			#'product_current_stock' : fields.function(_product_current_stock, string="Stock", type='text', store=False),
+			#'rank' :fields.function(_get_rank,string = "Rank", type = 'integer', method = True),
 			'delay' : fields.integer(string ="Delay", group_operator='avg'),
-			'sales_count' : fields.integer(string='Sales', compute='_product_sales', store=True),
+			#'sales_count' : fields.integer(string='Sales', compute='_product_sales', store=True),
 			#'rank' : fields.integer(string ="Rank", compute='_get_rank'),
 			#'rank' : fields.integer(related = "product_tmpl_id.product_variant_ids.rank", string ="Rank", store= True),
 			#'sales_count': fields.function(_product_sales, string='Sales', type='integer',store=True),
