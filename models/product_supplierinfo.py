@@ -89,11 +89,4 @@ class ProductSupplierinfo(osv.osv):
 			#'sales_count': fields.function(_product_sales, string='Sales', type='integer',store=True),
 		}
 
-'''
-class product_product(osv.Model):
-    _inherit = 'product.product'
-
-    def _get_sales_count(self, cr, uid, ids, field_name, arg, context=None):
-    		return self.sales_count
-'''
 
